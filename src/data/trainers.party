@@ -4798,26 +4798,26 @@ Items: Potion / Potion
 Double Battle: No
 AI: Basic Trainer
 
-Geodude
+Onix
 Level: 12
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Tackle
-- Defense Curl
-- Rock Throw
+- Dragon Breath
+- Harden
 - Rock Tomb
 
-Geodude
+Roggenrola
 Level: 12
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Tackle
-- Defense Curl
-- Rock Throw
+- Harden
+- Stealth Rock
 - Rock Tomb
 
 Nosepass @ Oran Berry
 Level: 15
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Block
+- Thunder Wave
 - Harden
 - Tackle
 - Rock Tomb
@@ -4832,29 +4832,29 @@ Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
 
-Machop
+Murkrow
 Level: 16
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Karate Chop
-- Low Kick
-- Seismic Toss
-- Bulk Up
+- Wing Attack
+- Confuse Ray
+- Pursuit
+- Thief
 
-Meditite
+Carvanha
 Level: 16
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Focus Punch
-- Light Screen
-- Reflect
-- Bulk Up
+- Bite
+- Thief
+- Water Gun
+- Poison Fang
 
-Makuhita @ Sitrus Berry
+Pawniard @ Sitrus Berry
 Level: 19
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Arm Thrust
-- Vital Throw
-- Reversal
-- Bulk Up
+- Thief
+- Metal Claw
+- Fury Cutter
+- Scratch
 
 === TRAINER_WATTSON_1 ===
 Name: WATTSON
@@ -4866,21 +4866,21 @@ Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
 
-Voltorb
+Electabuzz
 Level: 20
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Rollout
-- Spark
-- Self Destruct
+- Swift
+- Thunder Wave
+- Light Screen
 - Shock Wave
 
-Electrike
+Flaaffy
 Level: 20
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Shock Wave
-- Leer
-- Quick Attack
-- Howl
+- Thunder Wave
+- Cotton Spore
+- Take Down
 
 Magneton
 Level: 22
@@ -4908,37 +4908,38 @@ Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Numel
+Torkoal
+Level: 24
+Ability: Drought
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Overheat
+- Iron Defense
+- Body Slam
+- Attract
+
+Magcargo
 Level: 24
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Overheat
-- Take Down
-- Magnitude
+- Solar Beam
+- Ancient Power
 - Sunny Day
 
-Slugma
-Level: 24
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Overheat
-- Smog
-- Light Screen
-- Sunny Day
-
-Camerupt
+Magmortar
 Level: 26
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Overheat
-- Tackle
-- Sunny Day
-- Attract
+- Confuse Ray
+- Flamethrower
+- Smokescreen
 
-Torkoal @ White Herb
+Arcanine @ White Herb
 Level: 29
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Overheat
+- Extreme Speed
+- Solar Beam
 - Sunny Day
-- Body Slam
-- Attract
 
 === TRAINER_NORMAN_1 ===
 Name: NORMAN
@@ -11032,15 +11033,19 @@ Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
 
+Scovillain
+Level: 24
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Sunny Day
+- Flamethrower
+- Headbutt
+- Razor Leaf
+
 Mightyena
 Level: 24
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-Zubat
-Level: 24
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-
-Camerupt
+Quilava
 Level: 25
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
