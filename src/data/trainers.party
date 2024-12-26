@@ -11024,7 +11024,15 @@ Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
 
-Mightyena
+Scovillain
+Level: 37
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Sunny Day
+- Flamethrower
+- Zen Headbutt
+- Solar Beam
+
+Houndoom
 Level: 37
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
@@ -11032,7 +11040,11 @@ Crobat
 Level: 38
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-Camerupt
+SPECIES_ARCANINE_HISUI
+Level: 38
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
+Typhlosion
 Level: 39
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
@@ -13510,7 +13522,7 @@ Music: Magma
 Double Battle: No
 AI: Check Bad Move
 
-Numel
+Baltoy
 Level: 26
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
@@ -13518,11 +13530,11 @@ Mightyena
 Level: 28
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
-Zubat
+Magmortar
 Level: 30
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
-Camerupt
+Talonflame
 Level: 33
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
