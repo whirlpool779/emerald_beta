@@ -1257,18 +1257,15 @@ PetalburgCity_Gym_Text_YouHaveGottenStronger:
 	.string "that you've earned.$"
 
 PetalburgCity_Gym_Text_NormanIntro:
-	.string "DAD: Hm…\n"
-	.string "So, you did get four GYM BADGES.\p"
-	.string "Fine, as I promised, we will have\n"
-	.string "a POKéMON battle.\p"
-	.string "{PLAYER}…\p"
-	.string "I'm so happy that I can have\n"
-	.string "a real battle with my own child.\p"
-	.string "But, a battle is a battle!\p"
-	.string "I will do everything in my power as\n"
-	.string "a GYM LEADER to win.\p"
-	.string "{PLAYER}, you'd better give it your\n"
-	.string "best shot, too!$"
+	.string "BRAWLY: Hello {PLAYER}!\n"
+	.string "I am BRAWLY, PETALBURG's GYM LEADER!\p"
+	.string "I originally hail from Dewford, but after\n"
+	.string "your father's promotion to Elite 4,\p"
+	.string "I was brought in to take responsiblity\n"
+	.string "of the PETALBURG GYM.\p"
+	.string "I hope you can challenge your father\n"
+	.string "one day, but first you have to get\l"
+	.string "through me! Let's have a grand battle!$"
 
 PetalburgCity_Gym_Text_NormanDefeat:
 	.string "…\p"

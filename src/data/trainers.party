@@ -563,11 +563,23 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
-Carvanha
+Cloyster
 Level: 28
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Toxic Spikes
+- Ice Beam
+- Razor Shell
+- Protect
 
-Mightyena
+Crawdaunt
+Level: 28
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Knock Off
+- Night Slash
+- Double Hit
+- Water Pulse
+
+Sealeo
 Level: 28
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
@@ -4951,37 +4963,37 @@ Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Spinda
+Machoke
 Level: 27
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Teeter Dance
-- Psybeam
-- Facade
-- Encore
+- Bulk Up
+- Revenge
+- Knock Off
+- Low Sweep
 
-Vigoroth
+Flamigo
 Level: 27
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Slash
-- Facade
-- Encore
-- Feint Attack
+- Bulk Up
+- Double Kick
+- Wing Attack
+- Detect
 
-Linoone
+Crabominable
 Level: 29
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Slash
-- Belly Drum
-- Facade
-- Headbutt
+- Bulk Up
+- Brick Break
+- Ice Punch
+- Slam
 
-Slaking @ Sitrus Berry
+Hariyama @ Sitrus Berry
 Level: 31
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Counter
-- Yawn
-- Facade
-- Feint Attack
+- Bulk Up
+- Fake Out
+- Force Palm
+- Arm Thrust
 
 === TRAINER_WINONA_1 ===
 Name: WINONA
@@ -4993,36 +5005,37 @@ Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer / Risky
 
-Swablu
+Swellow
+Shiny: Yes
 Level: 29
 IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
-- Perish Song
-- Mirror Move
-- Safeguard
+- Double Team
+- Hyper Beam
+- Quick Attack
 - Aerial Ace
 
-Tropius
+Gyarados
 Level: 29
 IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
-- Sunny Day
+- Twister
 - Aerial Ace
-- Solar Beam
-- Synthesis
-
-Pelipper
-Level: 30
-IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
-- Water Gun
-- Supersonic
-- Protect
-- Aerial Ace
+- Crunch
+- Waterfall
 
 Skarmory
-Level: 31
-IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+Level: 30
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
 - Sand Attack
 - Fury Attack
 - Steel Wing
+- Aerial Ace
+
+Gliscor
+Level: 31
+IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+- Poison Tail
+- U-turn
+- Earthquake
 - Aerial Ace
 
 Altaria @ Oran Berry
