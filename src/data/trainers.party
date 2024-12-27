@@ -5064,12 +5064,12 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Psychic
 - Light Screen
 
-Xatu
+Bronzong
 Level: 41
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Psychic
-- Sunny Day
-- Confuse Ray
+- Gyro Ball
+- Trick Room
 - Calm Mind
 
 Lunatone @ Sitrus Berry
@@ -5080,13 +5080,29 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Hypnosis
 - Calm Mind
 
-Solrock @ Sitrus Berry
+Solrock @ Power Herb
 Level: 42
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Sunny Day
 - Solar Beam
 - Psychic
 - Flamethrower
+
+Farigiraf
+Level: 43
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- Double Kick
+- Twin Beam
+- Psybeam
+- Calm Mind
+
+SPECIES_RAPIDASH_GALAR
+Level: 43
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- Calm Mind
+- Fairy Wind
+- Psybeam
+- Take Down
 
 === TRAINER_JUAN_1 ===
 Name: JUAN
