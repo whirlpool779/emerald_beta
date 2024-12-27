@@ -592,12 +592,16 @@ Music: Aqua
 Double Battle: No
 AI: Basic Trainer
 
+Cloyster
+Level: 37
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
 Sharpedo
 Level: 37
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Mightyena
-Level: 37
+Lapras
+Level: 40
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_ARCHIE ===
@@ -610,7 +614,7 @@ Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
 
-Mightyena
+Crawdaunt
 Level: 41
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
@@ -618,7 +622,15 @@ Crobat
 Level: 41
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-Sharpedo
+SPECIES_WEEZING_GALAR
+Level: 41
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
+Feraligatr
+Level: 43
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
+Sharpedo @ Sharpedonite
 Level: 43
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
@@ -5114,21 +5126,21 @@ Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Luvdisc
+Golisopod
 Level: 41
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Water Pulse
-- Attract
-- Sweet Kiss
-- Flail
+- Sucker Punch
+- Slash
+- Razor Shell
+- Swords Dance
 
-Whiscash
+SPECIES_GASTRODON_EAST
 Level: 41
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Rain Dance
 - Water Pulse
-- Amnesia
-- Earthquake
+- Ancient Power
+- Earth Power
 
 Sealeo
 Level: 43
@@ -5138,13 +5150,21 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Aurora Beam
 - Water Pulse
 
-Crawdaunt
+Jellicent
 Level: 43
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Water Pulse
-- Crabhammer
-- Taunt
-- Leer
+- Rain Dance
+- Shadow Ball
+- Hydro Pump
+
+Lapras
+Level: 45
+IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+- Water Pulse
+- Ice Shard
+- Confuse Ray
+- Ice Beam
 
 Kingdra @ Chesto Berry
 Level: 46
