@@ -4611,53 +4611,62 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 === TRAINER_SIDNEY ===
 Name: SIDNEY
 Class: Elite Four
-Pic: Elite Four Sidney
+Pic: Champion Wallace
 Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer / Force Setup First Turn
-Mugshot: Purple
+Mugshot: Blue
 
-Mightyena
+Pelipper
+Level: 46
+Ability: Drizzle
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- Water Pulse
+- Tailwind
+- Supersonic
+- Aerial Ace
+
+Wailord
 Level: 46
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Roar
+- Rain Dance
+- Dive
 - Double Edge
-- Sand Attack
-- Crunch
+- Blizzard
 
-Shiftry
+Ludicolo
 Level: 48
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Torment
-- Double Team
-- Swagger
-- Extrasensory
-
-Cacturne
-Level: 46
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Leech Seed
-- Feint Attack
-- Needle Arm
-- Cotton Spore
-
-Crawdaunt
-Level: 48
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- Giga Drain
 - Surf
-- Swords Dance
-- Strength
-- Facade
+- Leech Seed
+- Double Team
 
-Absol @ Sitrus Berry
+Basculegion
+Level: 48
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- Wave Crash
+- Thrash
+- Crunch
+- Headbutt
+
+Dragalge
 Level: 49
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Aerial Ace
-- Rock Slide
-- Swords Dance
-- Slash
+- Double Team
+- Water Pulse
+- Dragon Pulse
+- Toxic
+
+Milotic @ Sitrus Berry
+Level: 49
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Recover
+- Surf
+- Ice Beam
+- Toxic
 
 === TRAINER_PHOEBE ===
 Name: PHOEBE
@@ -4670,39 +4679,47 @@ Double Battle: No
 AI: Basic Trainer
 Mugshot: Green
 
-Dusclops
+Mismagius
 Level: 48
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Punch
+- Psybeam
 - Confuse Ray
-- Curse
-- Protect
+- Shadow Ball
+- Hex
 
-Banette
+Trevenant
+Level: 48
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- Horn Leech
+- Phantom Force
+- Will-O-Wisp
+- Destiny Bond
+
+SPECIES_MAROWAK_ALOLA
+Level: 49
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- Hex
+- Flame Wheel
+- Will O Wisp
+- Bonemerang
+
+Palossand
 Level: 49
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Shadow Ball
-- Grudge
-- Will O Wisp
-- Feint Attack
+- Giga Drain
+- Earthquake
+- Psychic
 
-Sableye
+Chandelure
 Level: 50
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Shadow Ball
-- Double Team
-- Night Shade
-- Feint Attack
+- Inferno
+- Will-O-Wisp
+- Hex
 
-Banette
-Level: 49
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Ball
-- Psychic
-- Thunderbolt
-- Facade
-
-Dusclops @ Sitrus Berry
+Dusclops @ Eviolite
 Level: 51
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Shadow Ball
@@ -4721,32 +4738,40 @@ Double Battle: No
 AI: Basic Trainer
 Mugshot: Pink
 
-Sealeo
+Abomasnow
 Level: 50
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Encore
-- Body Slam
+- Wood Hammer
+- Blizzard
 - Hail
-- Ice Ball
+- Ice Shard
 
-Glalie
+SPECIES_NINETALES_ALOLA
 Level: 50
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Light Screen
-- Crunch
+- Dazzling Gleam
+- Draining Kiss
 - Icy Wind
 - Ice Beam
 
-Sealeo
+Avalugg
 Level: 52
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Attract
-- Double Edge
-- Hail
-- Blizzard
+- Rest
+- Sleep Talk
+- Icicle Crash
+- Crunch
+
+Mamoswine
+Level: 52
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- Earthquake
+- Icy Wind
+- Ice Shard
+- Ancient Power
 
 Glalie
-Level: 52
+Level: 53
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Shadow Ball
 - Explosion
@@ -4770,7 +4795,7 @@ Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
-Mugshot: Blue
+Mugshot: Purple
 
 Shelgon
 Level: 52
@@ -4780,13 +4805,21 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Protect
 - Double Edge
 
-Altaria
+Dracovish
 Level: 54
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Double Edge
+- Ancient Power
 - Dragon Breath
-- Dragon Dance
-- Aerial Ace
+- Earthquake
+- Ice Fang
+
+Dhelmise
+Level: 54
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- Shadow Ball
+- Giga Drain
+- Heavy Slam
+- Anchor Shot
 
 Kingdra
 Level: 53
@@ -6291,9 +6324,9 @@ Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_WALLACE ===
-Name: WALLACE
+Name: NORMAN
 Class: Champion
-Pic: Champion Wallace
+Pic: Leader Norman
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore / Full Restore
@@ -6301,53 +6334,53 @@ Double Battle: No
 AI: Basic Trainer
 Mugshot: Yellow
 
-Wailord
+Porygon-Z
 Level: 57
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rain Dance
-- Water Spout
+- Discharge
+- Tri Attack
 - Double Edge
-- Blizzard
+- Recover
 
-Tentacruel
+Farigiraf
 Level: 55
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Toxic
-- Hydro Pump
-- Sludge Bomb
-- Ice Beam
+- Psychic
+- Twin Beam
+- Thunderbolt
+- Double Kick
 
-Ludicolo
+Tauros
 Level: 56
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Giga Drain
-- Surf
-- Leech Seed
-- Double Team
+- Zen Headbutt
+- Iron Head
+- Double-Edge
+- Thrash
 
-Whiscash
+Pidgeot
 Level: 56
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Surf
-- Amnesia
+- Aerial Ace
+- Steel Wing
+- Roost
 - Hyper Beam
 
-Gyarados
+Kangaskhan
 Level: 56
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Dragon Dance
+- Outrage
 - Earthquake
-- Hyper Beam
-- Surf
+- Shadow Ball
+- Fake Out
 
-Milotic @ Sitrus Berry
+Ursaluna @ Sitrus Berry
 Level: 58
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Recover
-- Surf
-- Ice Beam
-- Toxic
+- Ice Punch
+- Shadow Claw
+- Thrash
+- High Horsepower
 
 === TRAINER_ANDREW ===
 Name: ANDREW
