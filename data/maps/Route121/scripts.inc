@@ -1,6 +1,7 @@
 .set LOCALID_GRUNT_1, 12
 .set LOCALID_GRUNT_2, 13
 .set LOCALID_GRUNT_3, 14
+.set LOCALID_NORMAN, 27
 
 Route121_MapScripts::
 	.byte 0
@@ -190,3 +191,138 @@ Route121_Text_SafariZoneSign:
 	.string "“Filled with rare POKéMON!”\n"
 	.string "SAFARI ZONE$"
 
+Route121_Movement_Norman0:
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_left
+	step_end
+
+Route121_Movement_Norman1:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+Route121_Movement_Norman2:
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_left
+	step_end
+
+Route121_Movement_NormanLeave:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+Route121_EventScript_NormanTrigger0::
+	lockall
+	playse SE_PIN
+	applymovement LOCALID_NORMAN, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement LOCALID_NORMAN, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_NORMAN, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_NORMAN, Route121_Movement_Norman0
+	waitmovement 0
+	goto Route121_EventScript_NormanPost
+	end
+
+Route121_EventScript_NormanTrigger1::
+	lockall
+	playse SE_PIN
+	applymovement LOCALID_NORMAN, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement LOCALID_NORMAN, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_NORMAN, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_NORMAN, Route121_Movement_Norman1
+	waitmovement 0
+	goto Route121_EventScript_NormanPost
+	end
+
+Route121_EventScript_NormanTrigger2::
+	lockall
+	playse SE_PIN
+	applymovement LOCALID_NORMAN, Common_Movement_FaceLeft
+	waitmovement 0
+	applymovement LOCALID_NORMAN, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_NORMAN, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_NORMAN, Route121_Movement_Norman2
+	waitmovement 0
+	goto Route121_EventScript_NormanPost
+	end
+
+Route121_EventScript_NormanPost:
+	msgbox Route121_Text_NormanIntro, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_NORMAN_ELITE4, Route121_Text_NormanDefeat
+	setvar VAR_NORMAN_STATE, 1
+	msgbox Route121_Text_NormanPostBattle, MSGBOX_DEFAULT
+	giveitem ITEM_POKEBLOCK_CASE
+	call_if_eq VAR_RESULT, FALSE, Route121_EventScript_BagFull
+	msgbox Route121_Text_NormanGoodbye, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_NORMAN Route121_Movement_NormanLeave
+	waitmovement 0
+	removeobject LOCALID_NORMAN
+	releaseall
+	end
+
+Route121_Text_NormanIntro:
+	.string "Why if it isn't {PLAYER}!\p"
+	.string "I see you have come a long way on your\n"
+	.string "journey.\p"
+	.string "While we are both here, what do you say\n"
+	.string "for a battle?\p"
+	.string "I use to be a gym leader after all, and\n"
+	.string "the Pokemon I am training today should\l"
+	.string "be at your skill level.\p"
+	.string "As your father I am excited to see\n"
+	.string "how far your battling skills have come!\p" 
+	.string "Now come at me with all you got {PLAYER}!$"
+
+Route121_Text_NormanDefeat:
+	.string "Wow {PLAYER}... you have come so far\n"
+	.string "in such a short time.$"
+
+Route121_Text_NormanPostBattle:
+	.string "That was a great battle {PLAYER}!\p"
+	.string "With your level of skill I can see you\n"
+	.string "challenging the Pokemon league in no\l"
+	.string "time at all.\p"
+	.string "Until then I encourage you to keep\n"
+	.string "catching more and more Pokemon.\p"
+	.string "The Safari Zone is up ahead, I think\n"
+	.string "you should visit it.\p"
+	.string "I caught a lot of the Pokemon I use\n"
+	.string "today there.\p"
+	.string "However in order to get in you\n"
+	.string "need a {POKEBLOCK} case.\p"
+	.string "You have proven yourself in today's\n"
+	.string "battle, so take this!$"
+
+Route121_Text_NormanGoodbye:
+	.string "Good luck {PLAYER}. I look forward to\n"
+	.string "our next battle in the Pokemon league.$"
+
+Route121_EventScript_BagFull:
+	msgbox Route121_Text_BagFull, MSGBOX_DEFAULT
+	return
+
+Route121_Text_BagFull:
+	.string "Ah I see your bag is full. I suggest\n"
+	.string "you go to the contest hall in\l"
+	.string "Lilycove for another {POKEBLOCK} case.$"

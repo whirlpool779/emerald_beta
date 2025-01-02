@@ -214,19 +214,6 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
-      "x": 32,
-      "y": 5,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_CutTree",
-      "flag": "FLAG_TEMP_11"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 65,
       "y": 4,
       "elevation": 3,
@@ -262,19 +249,6 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route121_EventScript_Walter",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_HEX_MANIAC",
-      "x": 11,
-      "y": 11,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "Route121_EventScript_Tammy",
       "flag": "0"
     },
     {
@@ -315,19 +289,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
       "flag": "FLAG_TEMP_13"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_MANIAC",
-      "x": 11,
-      "y": 6,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
-      "movement_range_x": 1,
-      "movement_range_y": 4,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route121_EventScript_Cale",
-      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_4",
@@ -406,6 +367,19 @@
       "trainer_sight_or_berry_tree_id": "ITEM_ZINC",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_121_ZINC"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_NORMAN",
+      "x": 17,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "FLAG_ROUTE_121_NORMAN"
     }
   ],
   "warp_events": [
@@ -453,6 +427,33 @@
       "var": "VAR_ROUTE121_STATE",
       "var_value": "0",
       "script": "Route121_EventScript_AquaGruntsMoveOut"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_NORMAN_STATE",
+      "var_value": "0",
+      "script": "Route121_EventScript_NormanTrigger0"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_NORMAN_STATE",
+      "var_value": "0",
+      "script": "Route121_EventScript_NormanTrigger2"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_NORMAN_STATE",
+      "var_value": "0",
+      "script": "Route121_EventScript_NormanTrigger1"
     }
   ],
   "bg_events": [

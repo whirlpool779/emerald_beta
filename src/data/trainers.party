@@ -16972,3 +16972,46 @@ Double Battle: No
 Kyogre
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_NORMAN_ELITE4 ===
+Name: NORMAN
+Class: Elite Four
+Pic: Leader Norman
+Gender: Male
+Music: Elite Four
+Items: Full Restore
+Double Battle: No
+AI: Basic Trainer / Force Setup First Turn
+Mugshot: Yellow
+
+Slaking
+Level: 31
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+- Thunder
+- Shadow Ball
+- Facade
+- Earthquake
+
+Flamigo
+Level: 31
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+- Wing Attack
+- Roost
+- Payback
+- Low Kick
+
+Wyrdeer
+Level: 33
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+- Hypnosis
+- Take Down
+- Psyshield Bash
+- Confuse Ray
+
+Tauros
+Level: 35
+IVs: 27 HP / 27 Atk / 27 Def / 27 SpA / 27 SpD / 27 Spe
+- Assurance
+- Scary Face
+- Zen Headbutt
+- Raging Bull

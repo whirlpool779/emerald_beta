@@ -42411,3 +42411,101 @@ F_TRAINER_FEMALE |
             },
         },
     },
+#line 16976
+    [TRAINER_NORMAN_ELITE4] =
+    {
+#line 16977
+        .trainerName = _("NORMAN"),
+#line 16978
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+#line 16979
+        .trainerPic = TRAINER_PIC_LEADER_NORMAN,
+        .encounterMusic_gender = 
+#line 16981
+            TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+#line 16982
+        .items = { ITEM_FULL_RESTORE },
+#line 16983
+        .doubleBattle = FALSE,
+#line 16984
+        .aiFlags = AI_FLAG_BASIC_TRAINER | AI_FLAG_FORCE_SETUP_FIRST_TURN,
+#line 16985
+        .mugshotEnabled = TRUE,
+        .mugshotColor = MUGSHOT_COLOR_YELLOW,
+        .partySize = 4,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 16987
+            .species = SPECIES_SLAKING,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16989
+            .iv = TRAINER_PARTY_IVS(25, 25, 25, 25, 25, 25),
+#line 16988
+            .lvl = 31,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 16990
+                MOVE_THUNDER,
+                MOVE_SHADOW_BALL,
+                MOVE_FACADE,
+                MOVE_EARTHQUAKE,
+            },
+            },
+            {
+#line 16995
+            .species = SPECIES_FLAMIGO,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16997
+            .iv = TRAINER_PARTY_IVS(25, 25, 25, 25, 25, 25),
+#line 16996
+            .lvl = 31,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 16998
+                MOVE_WING_ATTACK,
+                MOVE_ROOST,
+                MOVE_PAYBACK,
+                MOVE_LOW_KICK,
+            },
+            },
+            {
+#line 17003
+            .species = SPECIES_WYRDEER,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 17005
+            .iv = TRAINER_PARTY_IVS(25, 25, 25, 25, 25, 25),
+#line 17004
+            .lvl = 33,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 17006
+                MOVE_HYPNOSIS,
+                MOVE_TAKE_DOWN,
+                MOVE_PSYSHIELD_BASH,
+                MOVE_CONFUSE_RAY,
+            },
+            },
+            {
+#line 17011
+            .species = SPECIES_TAUROS,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 17013
+            .iv = TRAINER_PARTY_IVS(27, 27, 27, 27, 27, 27),
+#line 17012
+            .lvl = 35,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 17014
+                MOVE_ASSURANCE,
+                MOVE_SCARY_FACE,
+                MOVE_ZEN_HEADBUTT,
+                MOVE_RAGING_BULL,
+            },
+            },
+        },
+    },
