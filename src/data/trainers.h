@@ -42455,7 +42455,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 16995
-            .species = SPECIES_FLAMIGO,
+            .species = SPECIES_URSARING,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 16997
             .iv = TRAINER_PARTY_IVS(25, 25, 25, 25, 25, 25),
@@ -42465,10 +42465,10 @@ F_TRAINER_FEMALE |
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16998
-                MOVE_WING_ATTACK,
-                MOVE_ROOST,
-                MOVE_PAYBACK,
-                MOVE_LOW_KICK,
+                MOVE_PLAY_ROUGH,
+                MOVE_SLASH,
+                MOVE_BRICK_BREAK,
+                MOVE_SCARY_FACE,
             },
             },
             {
