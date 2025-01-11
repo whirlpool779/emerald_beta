@@ -1106,7 +1106,7 @@
       "name": "EverGrandeCity_SidneysRoom_Layout",
       "width": 13,
       "height": 14,
-      "primary_tileset": "gTileset_Building",
+      "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_EliteFour",
       "border_filepath": "data/layouts/EverGrandeCity_SidneysRoom/border.bin",
       "blockdata_filepath": "data/layouts/EverGrandeCity_SidneysRoom/map.bin"
