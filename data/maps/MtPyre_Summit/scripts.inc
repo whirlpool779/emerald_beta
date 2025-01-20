@@ -60,15 +60,45 @@ MtPyre_Summit_EventScript_TeamAquaTrigger2::
 	end
 
 MtPyre_Summit_Text_PhoebeIntro:
-	.string "What are you guys doing?\n"
-	.string "blocking our way like this.\p"
-	.string "any time and go stop them!$"
+	.string "PHOEBE: Stop right there! Those orbs\n"
+	.string "do not belong to the likes of you!\p"
+	.string "You don't realize the power you hold.\n"
+	.string "These orbs were never meant for human\l"
+	.string "beings to control!\p"
+	.string "ARCHIE: We are quite aware of the\n"
+	.string "power that resides in these orbs.\p"
+	.string "Just because you are not strong enough\n"
+	.string "to control them doesn't mean we aren't.\p"
+	.string "MAXIE, I suggest for the both of us\n"
+	.string "we form a truce.\p"
+	.string "MAXIE: As much as I hate agreeing with\n"
+	.string "you ARCHIE, I think you're right.\p"
+	.string "ARCHIE: I'll take the scallywag.\p"
+	.string "And I'll take the hula girl. She looks\n"
+	.string "dressed more for a luau than a battle!\p"
+	.string "PHOEBE: Arghh... I'll show you!\p"
+	.string "ARCHIE: {PLAYER}, prepare for defeat!$"
 
 MtPyre_Summit_Movement_PhoebeEnter:
 	walk_up
 	walk_up
 	walk_up
 	walk_up
+	walk_up
+	walk_up
+	step_end
+
+MtPyre_Summit_Movement_PhoebePost:
+	walk_left
+	step_end
+
+MtPyre_Summit_Movement_PhoebeExit:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
 MtPyre_Summit_Text_ArchieDefeat:
@@ -76,7 +106,7 @@ MtPyre_Summit_Text_ArchieDefeat:
 	.string "I lost to a mere child like you?!$"
 
 MtPyre_Summit_Text_MaxieDefeat:
-	.string "MAXIE: Argh!! I can't believe\n"
+	.string "MAXIE: Argh!! I can't believe it!\n"
 	.string "I lost to miss hula hoops?!\p"
 	.string "PHOEBE: Aloha there loser!$"
 
@@ -99,6 +129,7 @@ MtPyre_Summit_EventScript_TeamAquaExits::
 	applymovement LOCALID_ARCHIE, Common_Movement_FaceDown
 	applymovement LOCALID_MAXIE, Common_Movement_FaceDown
 	waitmovement 0
+	delay 50
 	msgbox MtPyre_Summit_Text_ArchieIntro, MSGBOX_DEFAULT
 	closemessage
 	delay 20
@@ -107,10 +138,13 @@ MtPyre_Summit_EventScript_TeamAquaExits::
 	msgbox MtPyre_Summit_Text_PhoebeIntro, MSGBOX_DEFAULT
 	closemessage
 	trainerbattle_no_intro TRAINER_ARCHIE_MT_PYRE, MtPyre_Summit_Text_ArchieDefeat
+	delay 30
 	applymovement LOCALID_MAXIE, MtPyre_Summit_Movement_MaxieLoss
 	waitmovement 0
+	delay 30
 	msgbox MtPyre_Summit_Text_MaxieDefeat, MSGBOX_DEFAULT
 	closemessage
+	delay 30
 	msgbox MtPyre_Summit_Text_ArchieWeGotTheOrbLetsGo, MSGBOX_DEFAULT
 	closemessage
 	fadescreen FADE_TO_BLACK
@@ -134,6 +168,18 @@ MtPyre_Summit_EventScript_TeamAquaExits::
 	giveitem ITEM_MAGMA_EMBLEM
 	setflag FLAG_RECEIVED_RED_OR_BLUE_ORB
 	setflag FLAG_HIDE_JAGGED_PASS_MAGMA_GUARD
+	applymovement LOCALID_PHOEBE, MtPyre_Summit_Movement_PhoebePost
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	msgbox MtPyre_Summit_Text_PhoebePost, MSGBOX_DEFAULT
+	closemessage
+	giveitem ITEM_TM30
+	msgbox MtPyre_Summit_Text_PhoebeShadowBall, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PHOEBE, MtPyre_Summit_Movement_PhoebeExit
+	waitmovement 0
+	removeobject LOCALID_PHOEBE
 	releaseall
 	end
 
@@ -556,14 +602,15 @@ MtPyre_Summit_Text_Grunt4PostBattle:
 	.string "with us members and our leader.$"
 
 MtPyre_Summit_Text_ArchieWeGotTheOrbLetsGo:
-	.string "ARCHIE: TEAM MAGMA's MAXIE got ahead\n"
-	.string "of us, but we also got what we wanted.\p"
-	.string "The RED ORB preserved at MT. PYRE…\n"
-	.string "I, ARCHIE, now have it in my possession!\p"
-	.string "Fufufu… Now we can bring our ultimate\n"
-	.string "objective to fruition!\p"
-	.string "Okay, TEAM!\n"
-	.string "We're pulling out!$"
+	.string "ARCHIE: No matter. We were defeated,\n"
+	.string "but we also got what we wanted.\p"
+	.string "MAXIE, let's swallow our pride and cut\n"
+	.string "our losses.\p"
+	.string "MAXIE: Grr... I suppose you're right\n"
+	.string "ARCHIE.\p"
+	.string "Team Magma!\p"
+	.string "ARCHIE: Team Aqua!\p"
+	.string "Pull out!$"
 
 MtPyre_Summit_Text_ArchieIntro:
 	.string "ARCHIE: You certainly know how\n"
@@ -581,14 +628,31 @@ MtPyre_Summit_Text_BothOrbsTakenMagmaLeftThis:
 	.string "the two ORBS?\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
-	.string "Oh, yes. Was it TEAM MAGMA who came\n"
-	.string "and took the BLUE ORB first?\p"
-	.string "Well, in their haste, they left this\n"
-	.string "behind.\p"
+	.string "Oh, yes. In the scuffle, I saw that the\n"
+	.string "fellow in red left this behind.\p"
 	.string "I couldn't imagine what exactly it\n"
 	.string "could be.\p"
 	.string "I would like you to have it.\n"
 	.string "Perhaps it will be useful in some way.$"
+
+MtPyre_Summit_Text_PhoebePost:
+	.string "{PLAYER}, I am most grateful for your\n"
+	.string "help defeating Team Aqua!\p"
+	.string "I could sense the spirts between you\n"
+	.string "and your Pokemon. That strength is why\l"
+	.string "you were victorious.\p"
+	.string "I believe that in due time you and I\n"
+	.string "will face each other in battle.\p"
+	.string "Until then I hope you can take this as\n"
+	.string "a token of my appreciation.$"
+
+MtPyre_Summit_Text_PhoebeShadowBall:
+	.string "That contains the TM Shadow Ball.\p"
+	.string "If you ever catch a Ghost Pokemon,\n"
+	.string "perhaps even here at Mt. Pyre you\l"
+	.string "will be able to teach it that.\p"
+	.string "Farewell {PLAYER}, may the spirits\n"
+	.string "of your Pokemon continue to guide you.$"
 
 MtPyre_Summit_Text_OrbsHaveBeenTaken:
 	.string "The BLUE ORB and RED ORB taken by\n"
