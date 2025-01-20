@@ -5,6 +5,7 @@
 .set LOCALID_GRUNT_3, 6
 .set LOCALID_GRUNT_4, 7
 .set LOCALID_MAXIE, 8
+.set LOCALID_PHOEBE, 9
 
 MtPyre_Summit_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MtPyre_Summit_OnTransition
@@ -19,44 +20,109 @@ MtPyre_Summit_EventScript_SetArchieMaxiePositions::
 	setobjectxyperm LOCALID_ARCHIE, 22, 6
 	end
 
+MtPyre_Summit_Movement_TeamAqua0:
+	walk_up
+	step_end
+
+MtPyre_Summit_Movement_TeamAqua1:
+	walk_left
+	walk_up
+	step_end
+
+MtPyre_Summit_Movement_TeamAqua2:
+	walk_left
+	walk_left
+	walk_up
+	step_end
+
 MtPyre_Summit_EventScript_TeamAquaTrigger0::
 	lockall
 	setvar VAR_0x8008, 0
+	applymovement OBJ_EVENT_ID_PLAYER, MtPyre_Summit_Movement_TeamAqua0
+	waitmovement 0
 	goto MtPyre_Summit_EventScript_TeamAquaExits
 	end
 
 MtPyre_Summit_EventScript_TeamAquaTrigger1::
 	lockall
 	setvar VAR_0x8008, 1
+	applymovement OBJ_EVENT_ID_PLAYER, MtPyre_Summit_Movement_TeamAqua1
+	waitmovement 0
 	goto MtPyre_Summit_EventScript_TeamAquaExits
 	end
 
 MtPyre_Summit_EventScript_TeamAquaTrigger2::
 	lockall
 	setvar VAR_0x8008, 2
+	applymovement OBJ_EVENT_ID_PLAYER, MtPyre_Summit_Movement_TeamAqua2
+	waitmovement 0
 	goto MtPyre_Summit_EventScript_TeamAquaExits
 	end
+
+MtPyre_Summit_Text_PhoebeIntro:
+	.string "What are you guys doing?\n"
+	.string "blocking our way like this.\p"
+	.string "any time and go stop them!$"
+
+MtPyre_Summit_Movement_PhoebeEnter:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+MtPyre_Summit_Text_ArchieDefeat:
+	.string "What?!\n"
+	.string "I lost to a mere child like you?!$"
+
+MtPyre_Summit_Text_MaxieDefeat:
+	.string "MAXIE: Argh!! I can't believe\n"
+	.string "I lost to miss hula hoops?!\p"
+	.string "PHOEBE: Aloha there loser!$"
+
+MtPyre_Summit_Movement_MaxieLoss:
+	lock_facing_direction
+	walk_fast_up
+	unlock_facing_direction
+	step_end
 
 MtPyre_Summit_EventScript_TeamAquaExits::
 	playbgm MUS_ENCOUNTER_AQUA, FALSE
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement LOCALID_ARCHIE, Common_Movement_WalkInPlaceFasterDown
+	applymovement LOCALID_ARCHIE, Common_Movement_ExclamationMark
+	applymovement LOCALID_MAXIE, Common_Movement_ExclamationMark
 	waitmovement 0
-	delay 50
-	call_if_eq VAR_0x8008, 0, MtPyre_Summit_EventScript_ArchieFacePlayer0
-	call_if_eq VAR_0x8008, 1, MtPyre_Summit_EventScript_ArchieFacePlayer1
-	call_if_eq VAR_0x8008, 2, MtPyre_Summit_EventScript_ArchieFacePlayer2
+	applymovement LOCALID_ARCHIE, Common_Movement_Delay48
+	applymovement LOCALID_MAXIE, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_ARCHIE, Common_Movement_FaceDown
+	applymovement LOCALID_MAXIE, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox MtPyre_Summit_Text_ArchieIntro, MSGBOX_DEFAULT
+	closemessage
+	delay 20
+	clearflag FLAG_HIDE_MT_PYRE_SUMMIT_PHOEBE
+	applymovement LOCALID_PHOEBE, MtPyre_Summit_Movement_PhoebeEnter
+	msgbox MtPyre_Summit_Text_PhoebeIntro, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_ARCHIE_MT_PYRE, MtPyre_Summit_Text_ArchieDefeat
+	applymovement LOCALID_MAXIE, MtPyre_Summit_Movement_MaxieLoss
+	waitmovement 0
+	msgbox MtPyre_Summit_Text_MaxieDefeat, MSGBOX_DEFAULT
+	closemessage
 	msgbox MtPyre_Summit_Text_ArchieWeGotTheOrbLetsGo, MSGBOX_DEFAULT
 	closemessage
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_ARCHIE
+	removeobject LOCALID_MAXIE
 	removeobject LOCALID_GRUNT_1
 	removeobject LOCALID_GRUNT_2
 	removeobject LOCALID_GRUNT_3
 	removeobject LOCALID_GRUNT_4
 	setflag FLAG_HIDE_MT_PYRE_SUMMIT_ARCHIE
 	setflag FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_AQUA
+	setflag FLAG_HIDE_MT_PYRE_1F_PHOEBE
 	fadedefaultbgm
 	fadescreen FADE_FROM_BLACK
 	delay 20
@@ -498,6 +564,11 @@ MtPyre_Summit_Text_ArchieWeGotTheOrbLetsGo:
 	.string "objective to fruition!\p"
 	.string "Okay, TEAM!\n"
 	.string "We're pulling out!$"
+
+MtPyre_Summit_Text_ArchieIntro:
+	.string "ARCHIE: You certainly know how\n"
+	.string "to make your way around {PLAYER}.\p"
+	.string "However your timing is too late.$"
 
 MtPyre_Summit_Text_BothOrbsTakenMagmaLeftThis:
 	.string "Oh, no…\n"

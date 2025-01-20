@@ -1,3 +1,5 @@
+.set LOCALID_PHOEBE, 8
+
 MtPyre_1F_MapScripts::
 	.byte 0
 
@@ -45,3 +47,47 @@ MtPyre_1F_Text_RestingPlaceOfZigzagoon:
 	.string "This is the final resting place of my\n"
 	.string "ZIGZAGOON. I cherished it…$"
 
+MtPyre_1F_Poochyena_Text:
+	.string "Grrrr!$"
+
+MtPyre_1F_EventScript_MagmaPoochyena::
+	msgbox MtPyre_1F_Poochyena_Text, MSGBOX_SIGN
+	end
+
+MtPyre_1F_Dusclops_Text:
+	.string "Dusc!$"
+
+MtPyre_1F_EventScript_PhoebeDusclops::
+	msgbox MtPyre_1F_Dusclops_Text, MSGBOX_SIGN
+	end
+
+MtPyre_1F_Text_Phoebe:
+	.string "I'll take care of these Magma holligans.\n"
+	.string "Why don't you go ahead and take care of\l"
+	.string "the Aqua ones outside!$"
+
+
+MtPyre_1F_EventScript_PhoebeTrigger::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement LOCALID_PHOEBE, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox MtPyre_1F_Text_Phoebe, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PHOEBE, Common_Movement_FaceUp
+	waitmovement 0
+	setvar VAR_PHOEBE_STATE, 1
+	release
+	end
+
+MtPyre_1F_EventScript_PhoebePostTrigger::
+	lock
+	applymovement LOCALID_PHOEBE, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox MtPyre_1F_Text_Phoebe, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PHOEBE, Common_Movement_FaceUp
+	waitmovement 0
+	release
+	end
