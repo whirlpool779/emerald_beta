@@ -1,5 +1,6 @@
 .set LOCALID_WOMAN_1, 19
 .set LOCALID_MAN_1, 20
+.set LOCALID_RIVAL, 17
 
 LilycoveCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LilycoveCity_OnTransition
@@ -19,10 +20,6 @@ LilycoveCity_OnLoad:
 	end
 
 LilycoveCity_EventScript_SetWailmerMetatiles::
-	setmetatile 76, 12, METATILE_Lilycove_Wailmer0, TRUE
-	setmetatile 77, 12, METATILE_Lilycove_Wailmer1, TRUE
-	setmetatile 76, 13, METATILE_Lilycove_Wailmer2, TRUE
-	setmetatile 77, 13, METATILE_Lilycove_Wailmer3, TRUE
 	setmetatile 76, 14, METATILE_Lilycove_Wailmer0_Alt, TRUE
 	setmetatile 77, 14, METATILE_Lilycove_Wailmer1_Alt, TRUE
 	setmetatile 76, 15, METATILE_Lilycove_Wailmer2, TRUE
@@ -31,6 +28,10 @@ LilycoveCity_EventScript_SetWailmerMetatiles::
 	setmetatile 78, 16, METATILE_Lilycove_Wailmer1_Alt, TRUE
 	setmetatile 77, 17, METATILE_Lilycove_Wailmer2, TRUE
 	setmetatile 78, 17, METATILE_Lilycove_Wailmer3, TRUE
+	setmetatile 76, 18, METATILE_Lilycove_Wailmer0_Alt, TRUE
+	setmetatile 77, 18, METATILE_Lilycove_Wailmer1_Alt, TRUE
+	setmetatile 76, 19, METATILE_Lilycove_Wailmer2, TRUE
+	setmetatile 77, 19, METATILE_Lilycove_Wailmer3, TRUE
 	return
 
 LilycoveCity_EventScript_BerryGentleman::
@@ -229,20 +230,57 @@ LilycoveCity_EventScript_AquaGrunt4::
 	msgbox LilycoveCity_Text_IfWorldBecomesOurs, MSGBOX_NPC
 	end
 
-LilycoveCity_EventScript_Rival::
+LilycoveCity_Rival_Movement0::
+	walk_down
+	walk_right
+	step_end
+
+LilycoveCity_Rival_Movement1::
+	walk_right
+	step_end
+
+LilycoveCity_Rival_Movement2::
+	walk_up
+	walk_right
+	step_end
+
+LilycoveCity_EventScript_Rival0::
 	lock
-	faceplayer
+	applymovement OBJ_EVENT_ID_PLAYER, LilycoveCity_Rival_Movement0
+	waitmovement 0
+	applymovement LOCALID_RIVAL, Common_Movement_FacePlayer
+	waitmovement 0
 	checkplayergender
 	goto_if_eq VAR_RESULT, MALE, LilycoveCity_EventScript_May
 	goto_if_eq VAR_RESULT, FEMALE, LilycoveCity_EventScript_Brendan
 	end
 
+LilycoveCity_EventScript_Rival1::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, LilycoveCity_Rival_Movement1
+	waitmovement 0
+	applymovement LOCALID_RIVAL, Common_Movement_FacePlayer
+	waitmovement 0
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, LilycoveCity_EventScript_May
+	goto_if_eq VAR_RESULT, FEMALE, LilycoveCity_EventScript_Brendan
+	end
+
+LilycoveCity_EventScript_Rival2::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, LilycoveCity_Rival_Movement2
+	waitmovement 0
+	applymovement LOCALID_RIVAL, Common_Movement_FacePlayer
+	waitmovement 0
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, LilycoveCity_EventScript_May
+	goto_if_eq VAR_RESULT, FEMALE, LilycoveCity_EventScript_Brendan
+	end
+
+
 LilycoveCity_EventScript_May::
 	playbgm MUS_ENCOUNTER_MAY, TRUE
-	call_if_set FLAG_DECLINED_RIVAL_BATTLE_LILYCOVE, LilycoveCity_EventScript_MayAskToBattleAgain
-	call_if_unset FLAG_DECLINED_RIVAL_BATTLE_LILYCOVE, LilycoveCity_EventScript_MayAskToBattle
-	goto_if_eq VAR_RESULT, NO, LilycoveCity_EventScript_DeclineMayBattle
-	msgbox LilycoveCity_Text_MayWontBeBeaten, MSGBOX_DEFAULT
+	msgbox LilycoveCity_Text_MayIntro, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
 	case 0, LilycoveCity_EventScript_BattleMayTreecko
 	case 1, LilycoveCity_EventScript_BattleMayTorchic
@@ -267,9 +305,6 @@ LilycoveCity_EventScript_DeclineMayBattle::
 
 LilycoveCity_EventScript_Brendan::
 	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
-	call_if_set FLAG_DECLINED_RIVAL_BATTLE_LILYCOVE, LilycoveCity_EventScript_BrendanAskToBattleAgain
-	call_if_unset FLAG_DECLINED_RIVAL_BATTLE_LILYCOVE, LilycoveCity_EventScript_BrendanAskToBattle
-	goto_if_eq VAR_RESULT, NO, LilycoveCity_EventScript_DeclineBrendanBattle
 	msgbox LilycoveCity_Text_BrendanWontBeBeaten, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
 	case 0, LilycoveCity_EventScript_BattleBrendanTreecko
@@ -331,6 +366,7 @@ LilycoveCity_EventScript_DefeatedMay::
 	call_if_eq VAR_RESULT, TRUE, LilycoveCity_EventScript_MayPokemonLeague
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_PICHU_DOLL
+	setvar VAR_RIVAL_LILYCOVE, 0
 	goto LilycoveCity_EventScript_RivalFlyAway
 	end
 
@@ -501,6 +537,28 @@ LilycoveCity_Text_BrendanBattleMe:
 LilycoveCity_Text_BrendanWontBeBeaten:
 	.string "BRENDAN: Aww, but you know I'm not\n"
 	.string "going to lose to no {PLAYER}.$"
+
+LilycoveCity_Text_MayIntro:
+	.string "MAY: Hey there {PLAYER}!\n"
+	.string "I was just thinking... have you\l"
+	.string "ever questioned the path you were on?\p"
+	.string "Ever since we both started our journeys\n"
+	.string "I was hard set on following the path\l"
+	.string "my dad wanted.\p"
+	.string "But I am not sure if that is what I want.\p"
+	.string "Say what {PLAYER}, let's battle! I could\n"
+	.string "use some activity to clear my mind.$"
+
+LilycoveCity_Text_BrendanIntro:
+	.string "BRENDAN: Hey there {PLAYER}!\n"
+	.string "I was just thinking... have you\l"
+	.string "ever questioned the path you were on?\p"
+	.string "Ever since we both started our journeys\n"
+	.string "I was hard set on following the path\l"
+	.string "my dad wanted.\p"
+	.string "But I am not sure if that is what I want.\p"
+	.string "Say what {PLAYER}, let's battle! I could\n"
+	.string "use some activity to clear my mind.$"
 
 LilycoveCity_Text_BrendanDefeat:
 	.string "Humph…\n"
